@@ -1,5 +1,6 @@
 package org.sla;
 
 public class Plane {
-    int
+    int color;
+
 }
