@@ -13,6 +13,8 @@ class Plane {
     String destination;
     int travelDistance;
     double milesPerGallon;
+    double fuelUsed;
+    double fuelLeft;
 
     void describe() {
         System.out.println("This " + modelNumber + " " + vehicleType + " has a gorgeous " + color + " paint job.");
@@ -27,6 +29,16 @@ class Plane {
         milesPerGallon = (float)range/(float)fuelLoad;
         double milesPerGallon2 = Math.round(milesPerGallon*100.0)/100.0;
         System.out.println("With its range and fuel capacity, this " + vehicleType + " has " + milesPerGallon2 + " miles per gallon.");
-        System.out.println("If the distance from " + origin + " to " + destination + " is " + travelDistance + " miles, then how much of its fuel capacity will be used?");
+        System.out.println("If the distance from " + origin + " to " + destination + " is " + travelDistance + " miles, then how much fuel will be used?");
+        fuelUsed = ((float)travelDistance/(float)range)*(float)fuelLoad;
+        fuelLeft = (float)fuelLoad-(float)fuelUsed;
+        double fuelUsed2 = Math.round(fuelUsed*100.0)/100.0;
+        double fuelLeft2 = Math.round(fuelLeft*100.0)/100.0;
+        System.out.println("After its trip to " + destination + " this " + vehicleType + " will have " + fuelLeft2 + " gallons left over.");
+        System.out.println("The " + vehicleType + " will need to be given " + fuelUsed2 + " gallons to replenish its lost fuel.");
+    }
+
+    void makePlane () {
+
     }
 }

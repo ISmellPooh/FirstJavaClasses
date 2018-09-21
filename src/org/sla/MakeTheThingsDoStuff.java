@@ -21,5 +21,7 @@ class MakeTheThingsDoStuff {
         plane1.describe();
         System.out.println();
         plane1.tripStatus();
+        System.out.println();
+        plane1.makePlane();
     }
 }
