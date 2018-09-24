@@ -1,14 +1,8 @@
 package org.sla;
 
-class Plane {
-    int fuelLoad;
-    int passengerCount;
-    int cost;
-    int speed;
+class Plane extends Vehicle{
     int range;
-    String modelNumber;
-    String vehicleType;
-    String color;
+    int fuelLoad;
     String origin;
     String destination;
     int travelDistance;
@@ -20,7 +14,7 @@ class Plane {
     float fuelPrice = (float)2.85;
 
     void describe() {
-        System.out.println("This " + modelNumber + " " + vehicleType + " has a gorgeous " + color + " paint job.");
+        System.out.println("This " + model + " " + vehicleType + " has a gorgeous " + color + " paint job.");
         System.out.println("It has a max fuel load of " + fuelLoad + " gallons and a range of " + range + " nautical miles.");
         System.out.println("It has a maximum speed of " + speed + " miles per hour.");
         System.out.println("It has a passenger capacity of " + passengerCount + " people.");
