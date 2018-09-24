@@ -1,7 +1,6 @@
 package org.sla;
 
 public class Car {
-    ///
     int age;
     int yearMade;
     int horsePower;

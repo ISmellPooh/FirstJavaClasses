@@ -55,5 +55,8 @@ class MakeTheThingsDoStuff {
         if (car3.horsePower > car1.horsePower & car3.horsePower > car2.horsePower) {
             mostPowerfulCar = car3;
         }
+
+        System.out.println("The most powerful car is " + mostPowerfulCar+ " .");
+        mostPowerfulCar.describeCar();
     }
 }
