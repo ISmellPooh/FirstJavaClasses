@@ -15,6 +15,9 @@ class Plane {
     double milesPerGallon;
     double fuelUsed;
     double fuelLeft;
+    double fillUpPrice;
+
+    float fuelPrice = (float)2.85;
 
     void describe() {
         System.out.println("This " + modelNumber + " " + vehicleType + " has a gorgeous " + color + " paint job.");
@@ -36,6 +39,9 @@ class Plane {
         double fuelLeft2 = Math.round(fuelLeft*100.0)/100.0;
         System.out.println("After its trip to " + destination + " this " + vehicleType + " will have " + fuelLeft2 + " gallons left over.");
         System.out.println("The " + vehicleType + " will need to be given " + fuelUsed2 + " gallons to replenish its lost fuel.");
+        fillUpPrice = fuelPrice*(float)fuelUsed;
+        double fillUpPrice2 = Math.round(fillUpPrice*100.00)/100.00;
+        System.out.println("With the current price of gasoline, it will cost $" + fillUpPrice2 + " to refill on gasoline.");
     }
 
     void makePlane () {
