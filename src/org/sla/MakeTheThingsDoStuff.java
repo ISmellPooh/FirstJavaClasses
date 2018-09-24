@@ -5,7 +5,7 @@ class MakeTheThingsDoStuff {
     public static void main(String[] args) {
 
         Plane plane1 = new Plane();
-        plane1.modelNumber = "Boeing 747";
+        plane1.model = "Boeing 747";
         plane1.vehicleType = "aircraft";
         plane1.color = "blue";
         plane1.fuelLoad = 48445;
@@ -21,6 +21,8 @@ class MakeTheThingsDoStuff {
         plane1.describe();
         System.out.println();
         plane1.tripStatus();
+        System.out.println();
+        plane1.makePlane();
 
         Car car1 = new Car();
         car1.carBrand = "Plymouth";
