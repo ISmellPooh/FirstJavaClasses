@@ -17,11 +17,30 @@ class MakeTheThingsDoStuff {
         plane1.destination = "Los Angeles";
         plane1.travelDistance = 2396;
 
+        Plane plane2 = new Plane();
+        plane2.modelNumber = "F 16";
+        plane2.vehicleType = "aircraft";
+        plane2.color = "grey";
+        plane2.fuelLoad = 840;
+        plane2.range = 1740;
+        plane2.speed = 1500;
+        plane2.passengerCount = 2;
+        plane2.cost = 14600000;
+        plane2.origin = "New York";
+        plane2.destination = "Miami";
+        plane2.travelDistance = 1094;
+
         System.out.println();
         plane1.describe();
         System.out.println();
         plane1.tripStatus();
         System.out.println();
         plane1.makePlane();
+        System.out.println();
+        plane2.describe();
+        System.out.println();
+        plane2.tripStatus();
+        System.out.println();
+        plane2.makePlane();
     }
 }
