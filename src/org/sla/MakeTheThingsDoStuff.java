@@ -4,23 +4,36 @@ class MakeTheThingsDoStuff {
 
     public static void main(String[] args) {
 
-        Plane plane1 = new Plane();
-        plane1.model = "Boeing 747";
-        plane1.vehicleType = "aircraft";
-        plane1.color = "blue";
-        plane1.fuelLoad = 48445;
-        plane1.range = 7260;
-        plane1.speed = 570;
-        plane1.passengerCount = 524;
-        plane1.cost = 24000000;
-        plane1.origin = "Philadelphia";
-        plane1.destination = "Los Angeles";
-        plane1.travelDistance = 2396;
+        //Plane plane1 = new Plane();
+        //plane1.range = 7260;
+        //plane1.fuelLoad = 48445;
+        //plane1.passengerCount = 524;
+        //plane1.cost = 24000000;
+        //plane1.speed = 570;
+        //plane1.origin = "Philadelphia";
+        //plane1.destination = "Los Angeles";
+        //plane1.travelDistance = 2396;
+        //plane1.model = "Boeing 747";
+        //plane1.vehicleType = "aircraft";
+        //plane1.color = "blue";
+
+        Vehicle[] vehicles = new Vehicle[1];
+
+        vehicles[0] = new Plane(7260, 48445, 524, 24000000,
+                570, "Philadelphia", "Los Angeles", 2396,
+                "Boeing 747", "aircraft", "blue");
 
         System.out.println();
-        plane1.describe();
+
+        for (int i = 0; i < 1; i++) {
+            vehicles[i].describe();
+        }
         System.out.println();
-        plane1.tripStatus();
+
+        for (int i = 0; i < 1; i++) {
+            vehicles[i].tripStatus();
+        }
+        System.out.println();
 
         Car car1 = new Car();
         car1.carBrand = "Plymouth";
