@@ -60,7 +60,6 @@ class MakeTheThingsDoStuff {
             mostPowerfulCar = car3;
         }
 
-        System.out.println("The most powerful car is " + mostPowerfulCar+ " .");
-        mostPowerfulCar.describeCar();
+        System.out.println("The most powerful car is the " + mostPowerfulCar.yearMade + " " + mostPowerfulCar.carBrand + " " + mostPowerfulCar.carModel + " with " + mostPowerfulCar.horsePower + " horsepower.");
     }
 }
