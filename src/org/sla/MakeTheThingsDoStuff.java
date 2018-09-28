@@ -21,8 +21,6 @@ class MakeTheThingsDoStuff {
         plane1.describe();
         System.out.println();
         plane1.tripStatus();
-        System.out.println();
-        plane1.makePlane();
 
         Car car1 = new Car();
         car1.carBrand = "Plymouth";
@@ -49,6 +47,10 @@ class MakeTheThingsDoStuff {
         car3.carModel = "Veyron";
         car3.yearMade = 2011;
         car3.sizeOfEngine = "V16";
+        car3.horsePower = 1200;
+
+        car3.describeCar();
+        car3.carAge();
 
         Car mostPowerfulCar = car1;
         if (car2.horsePower > car1.horsePower) {
@@ -57,5 +59,8 @@ class MakeTheThingsDoStuff {
         if (car3.horsePower > car1.horsePower & car3.horsePower > car2.horsePower) {
             mostPowerfulCar = car3;
         }
+
+        System.out.println("The most powerful car is " + mostPowerfulCar+ " .");
+        mostPowerfulCar.describeCar();
     }
 }
