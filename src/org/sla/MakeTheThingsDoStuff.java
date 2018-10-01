@@ -17,20 +17,24 @@ class MakeTheThingsDoStuff {
         //plane1.vehicleType = "aircraft";
         //plane1.color = "blue";
 
-        Vehicle[] vehicles = new Vehicle[1];
+        Vehicle[] vehicles = new Vehicle[2];
 
         vehicles[0] = new Plane(7260, 48445, 524, 24000000,
                 570, "Philadelphia", "Los Angeles", 2396,
                 "Boeing 747", "aircraft", "blue");
 
+        vehicle[1] = new Plane(1740, 838, 2, 14600000,
+                1500, "Boston", "Seattle", 2486,
+                "F-16","aircraft", "silver");
+
         System.out.println();
 
-        for (int i = 0; i < 1; i++) {
+        for (int i = 0; i < 2; i++) {
             vehicles[i].describe();
         }
         System.out.println();
 
-        for (int i = 0; i < 1; i++) {
+        for (int i = 0; i < 2; i++) {
             vehicles[i].tripStatus();
         }
         System.out.println();
