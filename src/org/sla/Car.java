@@ -1,11 +1,13 @@
 package org.sla;
 
-public class Car extends Vehicle{
+public class Car {
+
     int yearMade;
     int horsePower;
     String carBrand;
     String carModel;
     String sizeOfEngine;
+    int age;
 
     void describeCar() {
         System.out.println("This is a" + carBrand + carModel + " .");
@@ -23,4 +25,4 @@ public class Car extends Vehicle{
         }
     }
 }
-}
+
