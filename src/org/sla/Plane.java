@@ -6,6 +6,10 @@ class Plane extends Vehicle{
     private String origin;
     private String destination;
     private int travelDistance;
+    private String color;
+    private double speed;
+    private int passengerCount;
+    private int cost;
     private double time;
     private double milesPerGallon;
     private double fuelUsed;
@@ -15,7 +19,7 @@ class Plane extends Vehicle{
 
     Plane(int theRange, int theFuelLoad, int thePassengerCount, int theCost, int theSpeed, String theOrigin,
           String theDestination, int theTravelDistance, String theModel, String theVehicleType, String theColor) {
-        super(thePassengerCount, theCost, theSpeed, theModel, theVehicleType, theColor);
+        super(theModel, "Plane");
         range = theRange;
         fuelLoad = theFuelLoad;
         origin = theOrigin;
@@ -23,19 +27,21 @@ class Plane extends Vehicle{
         travelDistance = theTravelDistance;
     }
 
+
+
     void describe() {
-        System.out.println("This " + getModel() + " " + getVehicleType() + " has a gorgeous " + getColor() + " paint job.");
+        System.out.println("This " + getModel() + " " + getVehicleType() + " has a gorgeous " + color + " paint job.");
         System.out.println("It has a max fuel load of " + fuelLoad + " gallons and a range of " + range + " nautical miles.");
-        System.out.println("It has a maximum speed of " + getSpeed() + " miles per hour.");
-        System.out.println("It has a passenger capacity of " + getPassengerCount() + " people.");
-        System.out.println("Finally, it costs $" + getCost() + ".");
+        System.out.println("It has a maximum speed of " + speed + " miles per hour.");
+        System.out.println("It has a passenger capacity of " + passengerCount + " people.");
+        System.out.println("Finally, it costs $" + cost + ".");
     }
 
     void tripStatus() {
         System.out.println("Today, this " + getVehicleType() + " is traveling from " + origin + " to " + destination + ".");
-        time = (float)travelDistance/(float)getSpeed();
+        time = (float)travelDistance/(float)speed;
         double time2 = Math.round(time*100.0)/100.0;
-        System.out.println("At a constant speed of " + getSpeed() + " miles per hour, the trip will take " + time2 + " hours.");
+        System.out.println("At a constant speed of " + speed + " miles per hour, the trip will take " + time2 + " hours.");
         milesPerGallon = (float)range/(float)fuelLoad;
         double milesPerGallon2 = Math.round(milesPerGallon*100.0)/100.0;
         System.out.println("With its range and fuel capacity, this " + getVehicleType() + " has " + milesPerGallon2 + " miles per gallon.");
