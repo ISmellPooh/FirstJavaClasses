@@ -23,7 +23,7 @@ class MakeTheThingsDoStuff {
                 570, "Philadelphia", "Los Angeles", 2396,
                 "Boeing 747", "aircraft", "blue");
 
-        vehicle[1] = new Plane(1740, 838, 2, 14600000,
+        vehicles[1] = new Plane(1740, 838, 2, 14600000,
                 1500, "Boston", "Seattle", 2486,
                 "F-16","aircraft", "silver");
 
